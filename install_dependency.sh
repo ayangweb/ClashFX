@@ -19,7 +19,7 @@ gzip Country.mmdb
 mv Country.mmdb.gz ./ClashX/Resources/Country.mmdb.gz
 echo "install dashboard"
 cd ClashX/Resources
-# Clone dashboard from MetaCubeX/Yacd-meta (replacement for defunct Dreamacro/clash-dashboard)
+# Clone dashboard from MetaCubeX/Yacd-meta (replaces defunct Dreamacro/clash-dashboard)
 if ! git clone --depth 1 -b gh-pages https://github.com/MetaCubeX/Yacd-meta.git dashboard 2>/dev/null; then
     echo "Warning: Failed to clone dashboard, creating placeholder"
     mkdir -p dashboard

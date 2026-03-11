@@ -152,11 +152,45 @@ class RemoteConfigManager {
             }
     }
 
+    static func tryDecodeBase64(_ string: String) -> String? {
+        let trimmed = string.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty,
+              !trimmed.contains("<html"),
+              !trimmed.contains("<!DOCTYPE"),
+              !trimmed.hasPrefix("{"),
+              !trimmed.hasPrefix("port:"),
+              !trimmed.hasPrefix("mixed-port:"),
+              !trimmed.contains("proxies:"),
+              !trimmed.contains("proxy-groups:") else {
+            return nil
+        }
+        let base64Cleaned = trimmed
+            .replacingOccurrences(of: "-", with: "+")
+            .replacingOccurrences(of: "_", with: "/")
+        let padded = base64Cleaned.padding(toLength: ((base64Cleaned.count + 3) / 4) * 4, withPad: "=", startingAt: 0)
+        guard let data = Data(base64Encoded: padded, options: .ignoreUnknownCharacters),
+              let decoded = String(data: data, encoding: .utf8),
+              decoded.contains("proxies:") || decoded.contains("proxy-groups:") || decoded.contains("port:") || decoded.contains("mixed-port:") else {
+            return nil
+        }
+        return decoded
+    }
+
     static func updateConfig(config: RemoteConfigModel, complete: ((String?) -> Void)? = nil) {
         getRemoteConfigData(config: config) { configString, suggestedFilename in
-            guard let newConfig = configString else {
+            guard let rawConfig = configString else {
                 complete?(NSLocalizedString("Download fail", comment: ""))
                 return
+            }
+
+            let newConfig: String
+            if verifyConfig(string: rawConfig) == nil {
+                newConfig = rawConfig
+            } else if let decoded = tryDecodeBase64(rawConfig) {
+                Logger.log("[Remote Config] Content was base64 encoded, decoded successfully")
+                newConfig = decoded
+            } else {
+                newConfig = rawConfig
             }
 
             let verifyRes = verifyConfig(string: newConfig)

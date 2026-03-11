@@ -31,7 +31,7 @@ cat > "$APPCAST_FILE" << EOF
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>ClashX</title>
-    <link>https://charlessnow.github.io/ClashX/appcast.xml</link>
+    <link>https://clashx-pro.github.io/ClashX/appcast.xml</link>
     <description>Most recent ClashX updates</description>
     <language>en</language>
     <item>
@@ -44,7 +44,7 @@ cat > "$APPCAST_FILE" << EOF
       <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
       <enclosure
-        url="https://github.com/charlessnow/ClashX/releases/download/$VERSION/ClashX.dmg"
+        url="https://github.com/ClashX-Pro/ClashX/releases/download/$VERSION/ClashX.dmg"
         sparkle:version="$VERSION"
         sparkle:shortVersionString="$VERSION"
         type="application/octet-stream"
