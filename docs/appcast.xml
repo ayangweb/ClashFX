@@ -6,6 +6,31 @@
     <description>Most recent ClashX updates</description>
     <language>en</language>
     <item>
+      <title>Version 1.122.0</title>
+      <description><![CDATA[
+        <h2>ClashX v1.122.0</h2>
+
+<h3>Bug Fixes</h3>
+<ul>
+  <li><strong>Fix auto-update</strong> — Added Sparkle EdDSA signing key (SUPublicEDKey) required by Sparkle 2.x. This fixes the "Check for Updates" menu being greyed out and the "Unable to check for updates" error on startup.</li>
+</ul>
+
+<p>Minimum system requirement: macOS 10.14.</p>
+      ]]></description>
+      <pubDate>Wed, 12 Mar 2026 06:15:00 +0000</pubDate>
+      <sparkle:version>1.122.0</sparkle:version>
+      <sparkle:shortVersionString>1.122.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://github.com/ClashX-Pro/ClashX/releases/download/1.122.0/ClashX.dmg"
+        sparkle:version="1.122.0"
+        sparkle:shortVersionString="1.122.0"
+        sparkle:edSignature="2qfBmQFRAa0EK7wgMusM/n1a8TPbk0WdETuqnH2STu74Jn8bION9bzLCKpDDeQHuc7XSDOrlM0efZTnnTvoKBA=="
+        length="28175088"
+        type="application/octet-stream"
+      />
+    </item>
+    <item>
       <title>Version 1.121.0</title>
       <description><![CDATA[
         <h2>ClashX v1.121.0</h2>
