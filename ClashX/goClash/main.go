@@ -521,15 +521,12 @@ func clashWriteEnhancedConfig(configPath *C.char, outputPath *C.char) *C.char {
 	}
 	rawMap["dns"] = dns
 
-	ec, _ := rawMap["external-controller"].(string)
-	if ec == "" {
-		if port, err := freeport.GetFreePort(); err == nil {
-			ec = "127.0.0.1:" + strconv.Itoa(port)
-		} else {
-			ec = "127.0.0.1:9090"
-		}
-		rawMap["external-controller"] = ec
+	if port, err := freeport.GetFreePort(); err == nil {
+		rawMap["external-controller"] = "127.0.0.1:" + strconv.Itoa(port)
+	} else {
+		rawMap["external-controller"] = "127.0.0.1:19090"
 	}
+	ec := rawMap["external-controller"].(string)
 
 	if secretOverride != "" {
 		rawMap["secret"] = secretOverride

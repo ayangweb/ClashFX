@@ -737,10 +737,13 @@ extension AppDelegate {
                 ConfigManager.shared.isRunning = false
                 clashReopenCacheDB()
                 self?.startProxy()
-                if ConfigManager.shared.isRunning {
-                    completion(nil)
-                } else {
+                guard ConfigManager.shared.isRunning else {
                     completion(NSLocalizedString("Failed to restart built-in core", comment: ""))
+                    return
+                }
+                let selectedConfig = ConfigManager.selectConfigName
+                ApiRequest.requestConfigUpdate(configName: selectedConfig) { _ in
+                    completion(nil)
                 }
             }
         }
