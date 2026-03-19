@@ -129,7 +129,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             clashSetupLogger()
 
             clash_setTrafficBlock { [weak self] up, down in
-                if RemoteControlManager.selectConfig == nil {
+                if RemoteControlManager.selectConfig == nil,
+                   ConfigManager.shared.isEnhancedModeActive == false {
                     DispatchQueue.main.async {
                         self?.didUpdateTraffic(up: Int(up), down: Int(down))
                     }
@@ -713,8 +714,6 @@ extension AppDelegate {
                             ConfigManager.shared.isEnhancedModeActive = true
                             self?.waitForExternalCore(port: port, secret: secret, retriesLeft: 10) { success in
                                 if success {
-                                    self?.syncConfig()
-                                    self?.resetStreamApi()
                                     self?.verifyTunStatus(port: port, secret: secret)
                                     completion(nil)
                                 } else {
@@ -871,8 +870,10 @@ extension AppDelegate {
                 } else {
                     self?.enhancedModeMenuItem.state = .on
                     Logger.log("Enhanced Mode restored successfully")
-                    self?.resetStreamApi()
                 }
+                self?.syncConfig()
+                MenuItemFactory.recreateProxyMenuItems()
+                self?.resetStreamApi()
             }
         }
 

@@ -34,7 +34,7 @@ class AutoUpgardeManager: NSObject {
     // MARK: Public
 
     func setup() {
-        controller = SPUStandardUpdaterController(updaterDelegate: self, userDriverDelegate: nil)
+        controller = SPUStandardUpdaterController(updaterDelegate: self, userDriverDelegate: self)
     }
 
     func setupCheckForUpdatesMenuItem(_ item: NSMenuItem) {
@@ -68,6 +68,38 @@ extension AutoUpgardeManager: SPUUpdaterDelegate {
     func updaterWillRelaunchApplication(_ updater: SPUUpdater) {
         SystemProxyManager.shared.disableProxy(port: 0, socksPort: 0, forceDisable: true)
     }
+}
+
+// MARK: - SPUStandardUserDriverDelegate
+
+extension AutoUpgardeManager: SPUStandardUserDriverDelegate {
+    var supportsGentleScheduledUpdateReminders: Bool {
+        return true
+    }
+
+    func standardUserDriverShouldHandleShowingScheduledUpdate(
+        _ update: SUAppcastItem,
+        andInImmediateFocus immediateFocus: Bool
+    ) -> Bool {
+        return immediateFocus
+    }
+
+    func standardUserDriverWillHandleShowingUpdate(
+        _ handleShowingUpdate: Bool,
+        forUpdate update: SUAppcastItem,
+        state: SPUUserUpdateState
+    ) {
+        guard !handleShowingUpdate, !state.userInitiated else { return }
+
+        NSUserNotificationCenter.default
+            .post(title: NSLocalizedString("Update Available", comment: ""),
+                  info: String(format: NSLocalizedString("Version %@ is available", comment: ""),
+                               update.displayVersionString))
+    }
+
+    func standardUserDriverDidReceiveUserAttention(forUpdate update: SUAppcastItem) {}
+
+    func standardUserDriverWillFinishUpdateSession() {}
 }
 
 // MARK: - Channel Enum
