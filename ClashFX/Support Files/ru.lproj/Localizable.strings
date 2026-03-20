@@ -1,0 +1,347 @@
+/* No comment provided by engineer. */
+"Active Connections" = "Активные соединения";
+
+/* No comment provided by engineer. */
+"Add a remote config" = "Добавить удаленную конфигурацию";
+
+/* No comment provided by engineer. */
+"Add a remote control config" = "Добавить конфигурацию удаленного управления";
+
+/* No comment provided by engineer. */
+"All Clients" = "Все клиенты";
+
+/* No comment provided by engineer. */
+"All Hosts" = "Все хосты";
+
+/* No comment provided by engineer. */
+"Apply and Quit" = "Применить и выйти";
+
+/* No comment provided by engineer. */
+"Benchmark" = "Тест скорости";
+
+/* No comment provided by engineer. */
+"Benchmark Finished!" = "Тест скорости завершен!";
+
+/* No comment provided by engineer. */
+"Benchmark has begun, please wait." = "Тест скорости начался, пожалуйста, подождите.";
+
+/* No comment provided by engineer. */
+"Benchmark is processing, please wait." = "Тест скорости выполняется, пожалуйста, подождите.";
+
+/* No comment provided by engineer. */
+"Cancel" = "Отмена";
+
+/* No comment provided by engineer. */
+"ClashFX fail to create ~/.config/clashfx folder. Please check privileges or manually create folder and restart ClashFX." = "ClashFX не удалось создать папку ~/.config/clashfx. Пожалуйста, проверьте права доступа или создайте папку вручную и перезапустите ClashFX.";
+
+/* No comment provided by engineer. */
+"ClashFX needs to install/update a helper tool with administrator privileges, otherwise ClashFX won't be able to configure system proxy." = "ClashFX необходимо установить/обновить вспомогательный инструмент с правами администратора, иначе ClashFX не сможет настроить системный прокси.";
+
+/* No comment provided by engineer. */
+"ClashFX Start Error!" = "Ошибка запуска ClashFX!";
+
+/* No comment provided by engineer. */
+"ClashFX use a daemon helper to setup your system proxy. Please enable ClashFX in the Login Items under the Allow in the Background section and relaunch the app" = "ClashFX использует фонового помощника для настройки системного прокси. Пожалуйста, включите ClashFX в Объектах входа в разделе Фоновые приложения и перезапустите приложение";
+
+/* No comment provided by engineer. */
+"Click OK to quit the app and apply change." = "Нажмите ОК, чтобы выйти из приложения и применить изменения.";
+
+/* No comment provided by engineer. */
+"Client" = "Клиент";
+
+/* No comment provided by engineer. */
+"Close Connection" = "Закрыть соединение";
+
+/* No comment provided by engineer. */
+"Config file have been changed" = "Файл конфигурации был изменен";
+
+/* No comment provided by engineer. */
+"Config loading Fail!" = "Ошибка загрузки конфигурации!";
+
+/* No comment provided by engineer. */
+"Connecting" = "Подключение";
+
+/* No comment provided by engineer. */
+"Copy Shell Command" = "Копировать команду оболочки";
+
+/* No comment provided by engineer. */
+"Copy Shell Command (External)" = "Копировать команду оболочки (внешнюю)";
+
+/* No comment provided by engineer. */
+"Custom your GEOIP MMDB download address." = "Настройте адрес загрузки GEOIP MMDB.";
+
+/* No comment provided by engineer. */
+"Date" = "Дата";
+
+/* No comment provided by engineer. */
+"Details" = "Подробности";
+
+/* No comment provided by engineer. */
+"Direct" = "Прямое";
+
+/* No comment provided by engineer. */
+"Direct Mode" = "Прямой режим";
+
+/* No comment provided by engineer. */
+"Done" = "Готово";
+
+/* No comment provided by engineer. */
+"Download" = "Скачать";
+
+/* No comment provided by engineer. */
+"Download fail" = "Ошибка загрузки";
+
+/* No comment provided by engineer. */
+"Download speed" = "Скорость загрузки";
+
+/* No comment provided by engineer. */
+"Edit in Text Mode" = "Редактировать в текстовом режиме";
+
+/* No comment provided by engineer. */
+"fail" = "ошибка";
+
+/* No comment provided by engineer. */
+"Fail" = "Ошибка";
+
+/* No comment provided by engineer. */
+"Fail:" = "Ошибка:";
+
+/* No comment provided by engineer. */
+"fails: %@" = "ошибки: %@";
+
+/* No comment provided by engineer. */
+"Global" = "Глобальный";
+
+/* No comment provided by engineer. */
+"Global Mode" = "Глобальный режим";
+
+/* No comment provided by engineer. */
+"Host" = "Хост";
+
+/* No comment provided by engineer. */
+"Hosts" = "Хосты";
+
+/* No comment provided by engineer. */
+"hours" = "часов";
+
+/* No comment provided by engineer. */
+"iCloud not available" = "iCloud недоступен";
+
+/* No comment provided by engineer. */
+"If you can not find ClashFX in the settings, you can try reset daemon" = "Если вы не можете найти ClashFX в настройках, вы можете попробовать сбросить демон";
+
+/* No comment provided by engineer. */
+"Install" = "Установить";
+
+/* No comment provided by engineer. */
+"Invalid input" = "Некорректный ввод";
+
+/* No comment provided by engineer. */
+"Legacy Install" = "Устаревший способ установки";
+
+/* No comment provided by engineer. */
+"Load Balance" = "Балансировка нагрузки";
+
+/* No comment provided by engineer. */
+"Local Clients" = "Локальные клиенты";
+
+/* No comment provided by engineer. */
+"Need to Restart the ClashFX to Take effect, Please start clashFX manually" = "Необходимо перезапустить ClashFX для применения изменений, пожалуйста, запустите ClashFX вручную";
+
+/* No comment provided by engineer. */
+"Never" = "Никогда";
+
+/* No comment provided by engineer. */
+"Never show again" = "Больше не показывать";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Open Connection Details" = "Открыть сведения о соединении";
+
+/* No comment provided by engineer. */
+"Open Dashboard" = "Открыть панель управления";
+
+/* No comment provided by engineer. */
+"Open Log" = "Открыть лог";
+
+/* No comment provided by engineer. */
+"Open Menu" = "Открыть меню";
+
+/* No comment provided by engineer. */
+"Open System Login Item Setting" = "Открыть настройки объектов входа";
+
+/* No comment provided by engineer. */
+"Please enable the location service for ClashFX to detect your current WiFi network's SSID name and provide the auto-suspend services." = "Пожалуйста, включите службу геолокации, чтобы ClashFX мог определить имя SSID вашей текущей сети WiFi и обеспечить услуги автоматической приостановки.";
+
+/* No comment provided by engineer. */
+"Ports Open Fail, Please try to restart ClashFX" = "Ошибка открытия портов, пожалуйста, попробуйте перезапустить ClashFX";
+
+/* No comment provided by engineer. */
+"Prelease" = "Предрелиз";
+
+/* No comment provided by engineer. */
+"Proxy Mode" = "Режим прокси";
+
+/* No comment provided by engineer. */
+"Proxy settings are changed by another process. ClashFX is no longer the default system proxy." = "Настройки прокси изменены другим процессом. ClashFX больше не является системным прокси по умолчанию.";
+
+/* No comment provided by engineer. */
+"Quit" = "Выйти";
+
+/* No comment provided by engineer. */
+"Quit ClashFX?" = "Выйти из ClashFX?";
+
+/* No comment provided by engineer. */
+"Recent Connections" = "Недавние соединения";
+
+/* No comment provided by engineer. */
+"Reduce alerts if notification permission is disabled" = "Уменьшить количество предупреждений, если уведомления отключены";
+
+/* No comment provided by engineer. */
+"Reload Config Fail" = "Ошибка перезагрузки конфигурации";
+
+/* No comment provided by engineer. */
+"Reload Config Succeed" = "Конфигурация успешно перезагружена";
+
+/* No comment provided by engineer. */
+"Remote Config Format Error" = "Ошибка формата удаленной конфигурации";
+
+/* No comment provided by engineer. */
+"Remote Config Update" = "Обновление удаленной конфигурации";
+
+/* No comment provided by engineer. */
+"Remote Config Update Fail" = "Ошибка обновления удаленной конфигурации";
+
+/* No comment provided by engineer. */
+"Requests" = "Запросы";
+
+/* No comment provided by engineer. */
+"Reset Daemon" = "Сбросить демон";
+
+/* No comment provided by engineer. */
+"ReTest" = "Перетестировать";
+
+/* No comment provided by engineer. */
+"Rule" = "Правило";
+
+/* No comment provided by engineer. */
+"Rule Mode" = "Режим правил";
+
+/* No comment provided by engineer. */
+"Script" = "Скрипт";
+
+/* No comment provided by engineer. */
+"Should be a least 1 hour" = "Должно быть не менее 1 часа";
+
+/* No comment provided by engineer. */
+"Sources" = "Источники";
+
+/* No comment provided by engineer. */
+"Stable" = "Стабильная";
+
+/* No comment provided by engineer. */
+"Status" = "Статус";
+
+/* No comment provided by engineer. */
+"Succeed!" = "Успешно!";
+
+/* No comment provided by engineer. */
+"Success" = "Успех";
+
+/* No comment provided by engineer. */
+"Success!" = "Успешно!";
+
+/* No comment provided by engineer. */
+"System Proxy" = "Системный прокси";
+
+/* No comment provided by engineer. */
+"System Proxy Changed" = "Системный прокси изменен";
+
+/* No comment provided by engineer. */
+"Tap to reload config" = "Нажмите для перезагрузки конфигурации";
+
+/* No comment provided by engineer. */
+"Testing" = "Тестирование";
+
+/* No comment provided by engineer. */
+"The active connections will be interrupted." = "Активные соединения будут прерваны.";
+
+/* No comment provided by engineer. */
+"The remote config name is duplicated" = "Имя удаленной конфигурации дублируется";
+
+/* No comment provided by engineer. */
+"The status icon is coverd or hide by other app." = "Значок статуса перекрыт или скрыт другим приложением.";
+
+/* No comment provided by engineer. */
+"This version of ClashFX contains a break change due to clash core 1.0 released. Check if your config is not working properly." = "Эта версия ClashFX содержит критические изменения в связи с выпуском ядра clash 1.0. Проверьте, работает ли ваша конфигурация должным образом.";
+
+/* No comment provided by engineer. */
+"total: %d, success: %d" = "всего: %d, успешно: %d";
+
+/* No comment provided by engineer. */
+"Type" = "Тип";
+
+/* No comment provided by engineer. */
+"Unknown" = "Неизвестно";
+
+/* No comment provided by engineer. */
+"Update external resource complete" = "Обновление внешних ресурсов завершено";
+
+/* No comment provided by engineer. */
+"Update GEOIP Database" = "Обновить базу данных GEOIP";
+
+/* No comment provided by engineer. */
+"Update remote config update interval" = "Обновить интервал обновления удаленной конфигурации";
+
+/* No comment provided by engineer. */
+"Updating" = "Обновление";
+
+/* No comment provided by engineer. */
+"Upload" = "Загрузить";
+
+/* No comment provided by engineer. */
+"Upload speed" = "Скорость отдачи";
+
+/* No comment provided by engineer. */
+"Use reload config to try reconnect." = "Используйте перезагрузку конфигурации для повторного подключения.";
+
+/* No comment provided by engineer. */
+"Enhanced Mode" = "Расширенный режим";
+
+/* No comment provided by engineer. */
+"Enhanced Mode Enabled" = "Расширенный режим включен";
+
+/* No comment provided by engineer. */
+"Enhanced Mode Disabled" = "Расширенный режим выключен";
+
+/* No comment provided by engineer. */
+"Failed to parse enhanced config" = "Не удалось разобрать расширенную конфигурацию";
+
+/* No comment provided by engineer. */
+"mihomo_core not found" = "Бинарный файл mihomo_core не найден в пакете приложения";
+
+/* No comment provided by engineer. */
+"Helper not available" = "Привилегированный помощник недоступен. Пожалуйста, переустановите из настроек отладки.";
+
+/* No comment provided by engineer. */
+"Enhanced Mode failed: core not responding" = "Ошибка расширенного режима: внешнее ядро не отвечает";
+
+/* No comment provided by engineer. */
+"Failed to restart built-in core" = "Не удалось перезапустить встроенное ядро";
+
+/* No comment provided by engineer. */
+"Follow System" = "Как в системе";
+
+/* No comment provided by engineer. */
+"Language" = "Язык";
+
+/* No comment provided by engineer. */
+"Language change requires restart" = "Смена языка требует перезагрузки. Перезапустить ClashFX сейчас?";
+
+/* No comment provided by engineer. */
+"Restart Now" = "Перезапустить сейчас";
+
+/* No comment provided by engineer. */
+"Later" = "Позже";

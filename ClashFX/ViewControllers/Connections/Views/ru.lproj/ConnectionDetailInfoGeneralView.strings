@@ -1,0 +1,53 @@
+/* Class = "NSTextFieldCell"; title = "NetworkType"; ObjectID = "6p6-n8-rBg"; */
+"6p6-n8-rBg.title" = "Тип сети";
+
+/* Class = "NSBox"; title = "Current Speed"; ObjectID = "7fZ-OX-aWF"; */
+"7fZ-OX-aWF.title" = "Текущая скорость";
+
+/* Class = "NSTextFieldCell"; title = "Source"; ObjectID = "9Id-dT-XYP"; */
+"9Id-dT-XYP.title" = "Источник";
+
+/* Class = "NSTextFieldCell"; title = "Upload"; ObjectID = "CGD-ut-PXk"; */
+"CGD-ut-PXk.title" = "Загрузка";
+
+/* Class = "NSBox"; title = "Rule"; ObjectID = "CiP-Ib-BPd"; */
+"CiP-Ib-BPd.title" = "Правило";
+
+/* Class = "NSTextFieldCell"; title = "Upload"; ObjectID = "GhE-tw-D8L"; */
+"GhE-tw-D8L.title" = "Загрузка";
+
+/* Class = "NSTextFieldCell"; title = "Entry"; ObjectID = "KQt-5l-lyc"; */
+"KQt-5l-lyc.title" = "Вход";
+
+/* Class = "NSTextFieldCell"; title = "Upload"; ObjectID = "KsS-nl-D2n"; */
+"KsS-nl-D2n.title" = "Загрузка";
+
+/* Class = "NSBox"; title = "Proxy Chain"; ObjectID = "MIz-sg-4Rx"; */
+"MIz-sg-4Rx.title" = "Цепочка прокси";
+
+/* Class = "NSBox"; title = "Max Speed"; ObjectID = "NBq-b1-RLL"; */
+"NBq-b1-RLL.title" = "Макс. скорость";
+
+/* Class = "NSTextFieldCell"; title = "Download"; ObjectID = "ZEc-E9-AXS"; */
+"ZEc-E9-AXS.title" = "Скачивание";
+
+/* Class = "NSTextFieldCell"; title = "Download"; ObjectID = "iem-RP-B0u"; */
+"iem-RP-B0u.title" = "Скачивание";
+
+/* Class = "NSBox"; title = "General"; ObjectID = "leq-MF-MFL"; */
+"leq-MF-MFL.title" = "Общие";
+
+/* Class = "NSTextFieldCell"; title = "Dest."; ObjectID = "m5m-4U-xAi"; */
+"m5m-4U-xAi.title" = "Назначение";
+
+/* Class = "NSBox"; title = "Other"; ObjectID = "nG8-0D-7W1"; */
+"nG8-0D-7W1.title" = "Другое";
+
+/* Class = "NSBox"; title = "Address"; ObjectID = "obG-yt-Gi8"; */
+"obG-yt-Gi8.title" = "Адрес";
+
+/* Class = "NSTextFieldCell"; title = "Download"; ObjectID = "tes-yR-PKh"; */
+"tes-yR-PKh.title" = "Скачивание";
+
+/* Class = "NSBox"; title = "Total"; ObjectID = "xB0-fx-J0y"; */
+"xB0-fx-J0y.title" = "Всего";

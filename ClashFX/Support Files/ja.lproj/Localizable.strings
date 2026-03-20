@@ -1,0 +1,347 @@
+/* No comment provided by engineer. */
+"Active Connections" = "アクティブな接続";
+
+/* No comment provided by engineer. */
+"Add a remote config" = "リモート設定を追加";
+
+/* No comment provided by engineer. */
+"Add a remote control config" = "リモートコントロール設定を追加";
+
+/* No comment provided by engineer. */
+"All Clients" = "すべてのクライアント";
+
+/* No comment provided by engineer. */
+"All Hosts" = "すべてのホスト";
+
+/* No comment provided by engineer. */
+"Apply and Quit" = "適用して終了";
+
+/* No comment provided by engineer. */
+"Benchmark" = "ベンチマーク";
+
+/* No comment provided by engineer. */
+"Benchmark Finished!" = "ベンチマーク完了！";
+
+/* No comment provided by engineer. */
+"Benchmark has begun, please wait." = "ベンチマークを開始しました。しばらくお待ちください。";
+
+/* No comment provided by engineer. */
+"Benchmark is processing, please wait." = "ベンチマークを実行中です。しばらくお待ちください。";
+
+/* No comment provided by engineer. */
+"Cancel" = "キャンセル";
+
+/* No comment provided by engineer. */
+"ClashFX fail to create ~/.config/clashfx folder. Please check privileges or manually create folder and restart ClashFX." = "ClashFXが ~/.config/clashfx フォルダの作成に失敗しました。権限を確認するか、手動でフォルダを作成して ClashFX を再起動してください。";
+
+/* No comment provided by engineer. */
+"ClashFX needs to install/update a helper tool with administrator privileges, otherwise ClashFX won't be able to configure system proxy." = "ClashFXには管理者権限でヘルチャーツールのインストールまたは更新が必要です。そうしないと、ClashFXはシステムプロキシを設定できません。";
+
+/* No comment provided by engineer. */
+"ClashFX Start Error!" = "ClashFX 開始エラー！";
+
+/* No comment provided by engineer. */
+"ClashFX use a daemon helper to setup your system proxy. Please enable ClashFX in the Login Items under the Allow in the Background section and relaunch the app" = "ClashFXはシステムプロキシを設定するためにデーモンヘルパーを使用します。「ログイン項目」の「バックグラウンドでの実行を許可」セクションで ClashFX を有効にして、アプリを再起動してください。";
+
+/* No comment provided by engineer. */
+"Click OK to quit the app and apply change." = "OKをクリックしてアプリを終了し、変更を適用します。";
+
+/* No comment provided by engineer. */
+"Client" = "クライアント";
+
+/* No comment provided by engineer. */
+"Close Connection" = "接続を閉じる";
+
+/* No comment provided by engineer. */
+"Config file have been changed" = "設定ファイルが変更されました";
+
+/* No comment provided by engineer. */
+"Config loading Fail!" = "設定の読み込みに失敗しました！";
+
+/* No comment provided by engineer. */
+"Connecting" = "接続中";
+
+/* No comment provided by engineer. */
+"Copy Shell Command" = "シェルコマンドをコピー";
+
+/* No comment provided by engineer. */
+"Copy Shell Command (External)" = "シェルコマンドをコピー (外部)";
+
+/* No comment provided by engineer. */
+"Custom your GEOIP MMDB download address." = "GEOIP MMDB のダウンロードアドレスをカスタマイズします。";
+
+/* No comment provided by engineer. */
+"Date" = "日付";
+
+/* No comment provided by engineer. */
+"Details" = "詳細";
+
+/* No comment provided by engineer. */
+"Direct" = "直結";
+
+/* No comment provided by engineer. */
+"Direct Mode" = "直結モード";
+
+/* No comment provided by engineer. */
+"Done" = "完了";
+
+/* No comment provided by engineer. */
+"Download" = "ダウンロード";
+
+/* No comment provided by engineer. */
+"Download fail" = "ダウンロード失敗";
+
+/* No comment provided by engineer. */
+"Download speed" = "ダウンロード速度";
+
+/* No comment provided by engineer. */
+"Edit in Text Mode" = "テキストモードで編集";
+
+/* No comment provided by engineer. */
+"fail" = "失敗";
+
+/* No comment provided by engineer. */
+"Fail" = "失敗";
+
+/* No comment provided by engineer. */
+"Fail:" = "失敗:";
+
+/* No comment provided by engineer. */
+"fails: %@" = "失敗: %@";
+
+/* No comment provided by engineer. */
+"Global" = "グローバル";
+
+/* No comment provided by engineer. */
+"Global Mode" = "グローバルモード";
+
+/* No comment provided by engineer. */
+"Host" = "ホスト";
+
+/* No comment provided by engineer. */
+"Hosts" = "ホスト";
+
+/* No comment provided by engineer. */
+"hours" = "時間";
+
+/* No comment provided by engineer. */
+"iCloud not available" = "iCloud を利用できません";
+
+/* No comment provided by engineer. */
+"If you can not find ClashFX in the settings, you can try reset daemon" = "設定で ClashFX が見つからない場合は、デーモンのリセットを試すことができます。";
+
+/* No comment provided by engineer. */
+"Install" = "インストール";
+
+/* No comment provided by engineer. */
+"Invalid input" = "無効な入力";
+
+/* No comment provided by engineer. */
+"Legacy Install" = "レガシーインストール";
+
+/* No comment provided by engineer. */
+"Load Balance" = "ロードバランス";
+
+/* No comment provided by engineer. */
+"Local Clients" = "ローカルクライアント";
+
+/* No comment provided by engineer. */
+"Need to Restart the ClashFX to Take effect, Please start clashFX manually" = "効果を反映させるには ClashFX の再起動が必要です。手動で ClashFX を起動してください。";
+
+/* No comment provided by engineer. */
+"Never" = "なし";
+
+/* No comment provided by engineer. */
+"Never show again" = "二度と表示しない";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Open Connection Details" = "接続の詳細を開く";
+
+/* No comment provided by engineer. */
+"Open Dashboard" = "ダッシュボードを開く";
+
+/* No comment provided by engineer. */
+"Open Log" = "ログを開く";
+
+/* No comment provided by engineer. */
+"Open Menu" = "メニューを開く";
+
+/* No comment provided by engineer. */
+"Open System Login Item Setting" = "システムのログイン項目設定を開く";
+
+/* No comment provided by engineer. */
+"Please enable the location service for ClashFX to detect your current WiFi network's SSID name and provide the auto-suspend services." = "ClashFXが現在の WiFi ネットワークの SSID 名を検出し、自動サスペンドサービスを提供できるように、位置情報サービスを有効にしてください。";
+
+/* No comment provided by engineer. */
+"Ports Open Fail, Please try to restart ClashFX" = "ポートの開放に失敗しました。ClashFX を再起動してください。";
+
+/* No comment provided by engineer. */
+"Prelease" = "プレリリース";
+
+/* No comment provided by engineer. */
+"Proxy Mode" = "プロキシモード";
+
+/* No comment provided by engineer. */
+"Proxy settings are changed by another process. ClashFX is no longer the default system proxy." = "プロキシ設定が別のプロセスによって変更されました。ClashFX はデフォルトのシステムプロキシではなくなりました。";
+
+/* No comment provided by engineer. */
+"Quit" = "終了";
+
+/* No comment provided by engineer. */
+"Quit ClashFX?" = "ClashFX を終了しますか？";
+
+/* No comment provided by engineer. */
+"Recent Connections" = "最近の接続";
+
+/* No comment provided by engineer. */
+"Reduce alerts if notification permission is disabled" = "通知権限が無効な場合のアラートを減らす";
+
+/* No comment provided by engineer. */
+"Reload Config Fail" = "設定の再読み込みに失敗しました";
+
+/* No comment provided by engineer. */
+"Reload Config Succeed" = "設定の再読み込みに成功しました";
+
+/* No comment provided by engineer. */
+"Remote Config Format Error" = "リモート設定の形式エラー";
+
+/* No comment provided by engineer. */
+"Remote Config Update" = "リモート設定の更新";
+
+/* No comment provided by engineer. */
+"Remote Config Update Fail" = "リモート設定の更新に失敗しました";
+
+/* No comment provided by engineer. */
+"Requests" = "リクエスト";
+
+/* No comment provided by engineer. */
+"Reset Daemon" = "デーモンをリセット";
+
+/* No comment provided by engineer. */
+"ReTest" = "再テスト";
+
+/* No comment provided by engineer. */
+"Rule" = "ルール";
+
+/* No comment provided by engineer. */
+"Rule Mode" = "ルールモード";
+
+/* No comment provided by engineer. */
+"Script" = "スクリプト";
+
+/* No comment provided by engineer. */
+"Should be a least 1 hour" = "少なくとも1時間にしてください";
+
+/* No comment provided by engineer. */
+"Sources" = "ソース";
+
+/* No comment provided by engineer. */
+"Stable" = "安定版";
+
+/* No comment provided by engineer. */
+"Status" = "ステータス";
+
+/* No comment provided by engineer. */
+"Succeed!" = "成功しました！";
+
+/* No comment provided by engineer. */
+"Success" = "成功";
+
+/* No comment provided by engineer. */
+"Success!" = "成功しました！";
+
+/* No comment provided by engineer. */
+"System Proxy" = "システムプロキシ";
+
+/* No comment provided by engineer. */
+"System Proxy Changed" = "システムプロキシが変更されました";
+
+/* No comment provided by engineer. */
+"Tap to reload config" = "タップして設定を再読み込み";
+
+/* No comment provided by engineer. */
+"Testing" = "テスト中";
+
+/* No comment provided by engineer. */
+"The active connections will be interrupted." = "アクティブな接続が中断されます。";
+
+/* No comment provided by engineer. */
+"The remote config name is duplicated" = "リモート設定名が重複しています";
+
+/* No comment provided by engineer. */
+"The status icon is coverd or hide by other app." = "ステータスアイコンが他のアプリに隠されています。";
+
+/* No comment provided by engineer. */
+"This version of ClashFX contains a break change due to clash core 1.0 released. Check if your config is not working properly." = "このバージョンの ClashFX は、clash core 1.0 のリリースに伴う破壊的な変更を含んでいます。設定が正しく動作しているか確認してください。";
+
+/* No comment provided by engineer. */
+"total: %d, success: %d" = "合計: %d、成功: %d";
+
+/* No comment provided by engineer. */
+"Type" = "タイプ";
+
+/* No comment provided by engineer. */
+"Unknown" = "不明";
+
+/* No comment provided by engineer. */
+"Update external resource complete" = "外部リソースの更新が完了しました";
+
+/* No comment provided by engineer. */
+"Update GEOIP Database" = "GEOIP データベースを更新";
+
+/* No comment provided by engineer. */
+"Update remote config update interval" = "リモート設定の更新間隔を更新";
+
+/* No comment provided by engineer. */
+"Updating" = "更新中";
+
+/* No comment provided by engineer. */
+"Upload" = "アップロード";
+
+/* No comment provided by engineer. */
+"Upload speed" = "アップロード速度";
+
+/* No comment provided by engineer. */
+"Use reload config to try reconnect." = "設定の再読み込みを使用して再接続を試みてください。";
+
+/* No comment provided by engineer. */
+"Enhanced Mode" = "拡張モード";
+
+/* No comment provided by engineer. */
+"Enhanced Mode Enabled" = "拡張モード有効";
+
+/* No comment provided by engineer. */
+"Enhanced Mode Disabled" = "拡張モード無効";
+
+/* No comment provided by engineer. */
+"Failed to parse enhanced config" = "拡張設定の解析に失敗しました";
+
+/* No comment provided by engineer. */
+"mihomo_core not found" = "アプリ内に mihomo_core バイナリが見つかりませんでした";
+
+/* No comment provided by engineer. */
+"Helper not available" = "ヘルパーツールが利用できません。「デバッグ」設定から再インストールしてください。";
+
+/* No comment provided by engineer. */
+"Enhanced Mode failed: core not responding" = "拡張モードエラー: 外部コアが応答しません";
+
+/* No comment provided by engineer. */
+"Failed to restart built-in core" = "内蔵コアの再起動に失敗しました";
+
+/* No comment provided by engineer. */
+"Follow System" = "システムに従う";
+
+/* No comment provided by engineer. */
+"Language" = "言語";
+
+/* No comment provided by engineer. */
+"Language change requires restart" = "言語の変更には再起動が必要です。今すぐ ClashFX を再起動しますか？";
+
+/* No comment provided by engineer. */
+"Restart Now" = "今すぐ再起動";
+
+/* No comment provided by engineer. */
+"Later" = "後で";
