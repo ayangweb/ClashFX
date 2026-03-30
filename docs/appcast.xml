@@ -6,6 +6,24 @@
     <description>Most recent ClashFX updates</description>
     <language>en</language>
     <item>
+  <title>Version 1.0.3</title>
+  <description><![CDATA[
+    <h2>ClashFX v1.0.3</h2><ul><li><strong>Fix geosite download failure</strong> — Bundle geosite.dat in the app so subscriptions with geosite rules work on first launch without needing GitHub access (#1)</li><li><strong>Fix version check showing 10.14</strong> — AppcastParser was collecting text from sibling XML elements (minimumSystemVersion). Version number is now correctly scoped (#2)</li><li><strong>Fix dashboard broken after "Update UI"</strong> — Clear all WKWebView data types including ServiceWorker registrations on launch. Add upgrade_ui JS bridge handler to safely reset dashboard from bundled files (#3)</li><li><strong>Auto-notify websites on release</strong> — New releases automatically update version numbers on clashfx.com and clashx.tech via repository_dispatch</li></ul>
+  ]]></description>
+  <pubDate>Mon, 30 Mar 2026 15:14:29 +0000</pubDate>
+  <sparkle:version>1.0.3</sparkle:version>
+  <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+  <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+  <enclosure
+    url="https://github.com/Clash-FX/ClashFX/releases/download/1.0.3/ClashFX.dmg"
+    sparkle:version="1.0.3"
+    sparkle:shortVersionString="1.0.3"
+    sparkle:edSignature="pEfSMtCV+JNyT2Q3DJGxpHCnKEPMMCtPF7uzwUGk3zmZccLk6pJKjqLC67inlba7lMOqv6q/T539BgtglFf1BA=="
+    length="96072146"
+    type="application/octet-stream"
+  />
+</item>
+    <item>
   <title>Version 1.0.2</title>
   <description><![CDATA[
     <h2>ClashFX v1.0.2</h2><ul><li><strong>Fix geosite download failure</strong> — Bundle geosite.dat in the app so subscriptions with geosite rules work on first launch without needing GitHub access (#1)</li><li><strong>Fix version check showing 10.14</strong> — AppcastParser was collecting text from sibling XML elements (minimumSystemVersion). Version number is now correctly scoped (#2)</li><li><strong>Fix dashboard broken after "Update UI"</strong> — Clear all WKWebView data types including ServiceWorker registrations on launch. Add upgrade_ui JS bridge handler to safely reset dashboard from bundled files (#3)</li><li><strong>Auto-notify websites on release</strong> — New releases automatically update version numbers on clashfx.com and clashx.tech via repository_dispatch</li></ul>
