@@ -70,7 +70,8 @@ jobs:
           -scheme ClashFX \
           -configuration Release \
           -derivedDataPath ./build_derived_data \
-          CODE_SIGN_IDENTITY="-"
+          CODE_SIGN_IDENTITY="-" \
+          ENABLE_HARDENED_RUNTIME=NO
 
         APP_PATH=$(find ./build_derived_data/Build/Products/Release -name "ClashFX.app" -type d | head -n 1)
 
