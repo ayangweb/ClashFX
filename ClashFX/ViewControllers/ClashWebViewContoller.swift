@@ -167,7 +167,7 @@ class ClashWebViewContoller: NSViewController {
         }
         let port = ConfigManager.shared.apiPort
         let secret = ConfigManager.shared.apiSecret
-        var defaultUrl = "http://127.0.0.1:\(port)/ui/?hostname=127.0.0.1&port=\(port)"
+        var defaultUrl = "http://127.0.0.1:\(port)/ui/#/setup?hostname=127.0.0.1&port=\(port)"
         if !secret.isEmpty {
             defaultUrl += "&secret=\(secret)"
         }
