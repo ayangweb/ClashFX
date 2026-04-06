@@ -114,6 +114,20 @@ func mergeUniqueStrings(base []string, additions []string) []string {
 	return result
 }
 
+func parseEntryAsPrefix(s string) (netip.Prefix, bool) {
+	if prefix, err := netip.ParsePrefix(s); err == nil {
+		return prefix.Masked(), true
+	}
+	if ip, err := netip.ParseAddr(s); err == nil {
+		bits := 32
+		if ip.Is6() {
+			bits = 128
+		}
+		return netip.PrefixFrom(ip, bits), true
+	}
+	return netip.Prefix{}, false
+}
+
 func splitTunRouteExcludeEntries(raw string) ([]netip.Prefix, []string, []string) {
 	var prefixes []netip.Prefix
 	var domains []string
@@ -124,19 +138,11 @@ func splitTunRouteExcludeEntries(raw string) ([]netip.Prefix, []string, []string
 		if entry == "" {
 			continue
 		}
-		if prefix, err := netip.ParsePrefix(entry); err == nil {
-			prefixes = append(prefixes, prefix.Masked())
+		if prefix, ok := parseEntryAsPrefix(entry); ok {
+			prefixes = append(prefixes, prefix)
 			continue
 		}
-		if ip, err := netip.ParseAddr(entry); err == nil {
-			bits := 32
-			if ip.Is6() {
-				bits = 128
-			}
-			prefixes = append(prefixes, netip.PrefixFrom(ip, bits))
-			continue
-		}
-		if strings.ContainsAny(entry, "*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") {
+		if strings.Contains(entry, ".") || strings.HasPrefix(entry, "*.") || strings.HasPrefix(entry, "+.") {
 			domains = append(domains, entry)
 			continue
 		}
@@ -209,31 +215,15 @@ func mergePrefixInterfaceSlice(base interface{}, additions []netip.Prefix) []int
 	case []interface{}:
 		for _, item := range value {
 			if str, ok := item.(string); ok {
-				if prefix, err := netip.ParsePrefix(str); err == nil {
-					existing = append(existing, prefix.Masked())
-					continue
-				}
-				if ip, err := netip.ParseAddr(str); err == nil {
-					bits := 32
-					if ip.Is6() {
-						bits = 128
-					}
-					existing = append(existing, netip.PrefixFrom(ip, bits))
+				if prefix, ok := parseEntryAsPrefix(str); ok {
+					existing = append(existing, prefix)
 				}
 			}
 		}
 	case []string:
 		for _, item := range value {
-			if prefix, err := netip.ParsePrefix(item); err == nil {
-				existing = append(existing, prefix.Masked())
-				continue
-			}
-			if ip, err := netip.ParseAddr(item); err == nil {
-				bits := 32
-				if ip.Is6() {
-					bits = 128
-				}
-				existing = append(existing, netip.PrefixFrom(ip, bits))
+			if prefix, ok := parseEntryAsPrefix(item); ok {
+				existing = append(existing, prefix)
 			}
 		}
 	case []netip.Prefix:
@@ -355,10 +345,10 @@ func parseDefaultConfigThenStart(checkPort, allowLan, ipv6 bool, proxyPort uint3
 	tunMu.Lock()
 	if tunEnabled {
 		applyTunConfig(rawCfg)
-	}
-	if err := applyTunRouteExclusions(rawCfg); err != nil {
-		tunMu.Unlock()
-		return nil, err
+		if err := applyTunRouteExclusions(rawCfg); err != nil {
+			tunMu.Unlock()
+			return nil, err
+		}
 	}
 	tunMu.Unlock()
 
@@ -417,7 +407,6 @@ func applyTunConfig(rawCfg *config.RawConfig) {
 			"8.8.8.8",
 		}
 	}
-	_ = applyTunRouteExclusions(rawCfg)
 }
 
 //export verifyClashConfig
@@ -622,12 +611,12 @@ func clashSetTunEnabled(enabled bool) *C.char {
 	tunMu.Lock()
 	if tunEnabled {
 		applyTunConfig(rawCfg)
+		if err := applyTunRouteExclusions(rawCfg); err != nil {
+			tunMu.Unlock()
+			return C.CString(err.Error())
+		}
 	} else {
 		rawCfg.Tun.Enable = false
-	}
-	if err := applyTunRouteExclusions(rawCfg); err != nil {
-		tunMu.Unlock()
-		return C.CString(err.Error())
 	}
 	tunMu.Unlock()
 
@@ -698,7 +687,9 @@ func clashResumeCore() *C.char {
 
 //export clashWriteEnhancedConfig
 func clashWriteEnhancedConfig(configPath *C.char, outputPath *C.char, tunRouteExcludeList *C.char) *C.char {
+	tunMu.Lock()
 	tunRouteExcludeRaw = C.GoString(tunRouteExcludeList)
+	tunMu.Unlock()
 	srcPath := C.GoString(configPath)
 	if srcPath == "" {
 		srcPath = constant.Path.Config()
