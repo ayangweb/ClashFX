@@ -1,13 +1,11 @@
-## ClashFX 1.0.8
+## ClashFX 1.0.9
 
 ### Bug Fixes
 
-- **Fix remote config import rejecting proxy-provider-only configs** — Configs that use only `proxy-providers` (without inline `proxies`) were incorrectly rejected with "Remote Config Format Error". These configs work fine in other Clash clients. The overly strict proxy count check has been removed, aligning remote config validation with local config loading behavior. Fixes #12
-- **Fix menu bar icon shrinking when speed display is disabled** — The tray icon was rendered too small when real-time speed display was turned off. by @YangYongAn in #11
+- **Fix remote config validation rejecting configs that use proxy-providers** — Configs referencing proxy-groups supplied by `proxy-providers` were rejected during import with errors like "proxy group: '…' not found", because the pre-validation performed full semantic checks before providers were fetched. Switched remote config verification to lightweight YAML-only validation; full validation still occurs when the config is loaded by the core. Fixes #12
 
 ---
 
 ### Bug 修复
 
-- **修复远程配置导入误拒仅含 proxy-providers 的配置** — 仅使用 `proxy-providers`（无内联 `proxies`）的配置会被错误拒绝并显示"格式错误"，但同样的配置在其他 Clash 客户端可正常使用。已移除过于严格的代理数量检查，使远程配置校验与本地加载行为保持一致。修复 #12
-- **修复关闭实时速率显示时菜单栏图标变小的问题** — 关闭实时网速显示后，托盘图标会变得过小。by @YangYongAn in #11
+- **修复导入使用 proxy-providers 的远程配置时报格式错误** — 当配置中的 proxy-group 引用了由 `proxy-providers` 提供的节点或组时，导入时会因 "proxy group: '…' not found" 而被拒绝，原因是预校验在 provider 尚未拉取时就执行了完整的语义检查。已将远程配置预校验改为仅验证 YAML 语法；完整校验仍在内核加载配置时执行。修复 #12
