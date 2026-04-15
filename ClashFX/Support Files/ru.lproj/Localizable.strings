@@ -360,3 +360,23 @@
 
 /* No comment provided by engineer. */
 "Later" = "Позже";
+/* No comment provided by engineer. */
+"Select Tray Icon Image" = "Выбрать изображение иконки трея";
+
+/* No comment provided by engineer. */
+"Failed to change tray icon" = "Не удалось изменить иконку трея";
+
+/* No comment provided by engineer. */
+"Drop PNG here" = "Перетащите PNG сюда";
+
+/* No comment provided by engineer. */
+"Select Image" = "Выбрать изображение";
+
+/* No comment provided by engineer. */
+"Reset" = "Сбросить";
+
+/* No comment provided by engineer. */
+"Appearance" = "Внешний вид";
+
+/* No comment provided by engineer. */
+"Tray Icon" = "Иконка трея";

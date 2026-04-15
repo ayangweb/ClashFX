@@ -9,8 +9,11 @@
 import AppKit
 
 enum StatusItemTool {
-    static let menuImage: NSImage = {
-        let customImagePath = (NSHomeDirectory() as NSString).appendingPathComponent("/.config/clashfx/menuImage.png")
+    static let customImagePath = (NSHomeDirectory() as NSString).appendingPathComponent("/.config/clashfx/menuImage.png")
+
+    static var menuImage: NSImage = loadMenuImage()
+
+    static func loadMenuImage() -> NSImage {
         if let image = NSImage(contentsOfFile: customImagePath) {
             image.isTemplate = true
             return image
@@ -21,7 +24,11 @@ enum StatusItemTool {
             return image
         }
         return NSImage()
-    }()
+    }
+
+    static func reloadMenuImage() {
+        menuImage = loadMenuImage()
+    }
 
     static let font: NSFont = {
         let fontSize: CGFloat = 9

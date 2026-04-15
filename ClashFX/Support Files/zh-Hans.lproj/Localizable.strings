@@ -397,3 +397,23 @@
 
 /* No comment provided by engineer. */
 "Later" = "稍后";
+/* No comment provided by engineer. */
+"Select Tray Icon Image" = "选择托盘图标图片";
+
+/* No comment provided by engineer. */
+"Failed to change tray icon" = "更换托盘图标失败";
+
+/* No comment provided by engineer. */
+"Drop PNG here" = "拖入 PNG 图片";
+
+/* No comment provided by engineer. */
+"Select Image" = "选择图片";
+
+/* No comment provided by engineer. */
+"Reset" = "重置";
+
+/* No comment provided by engineer. */
+"Appearance" = "外观";
+
+/* No comment provided by engineer. */
+"Tray Icon" = "托盘图标";

@@ -18,6 +18,16 @@ class SettingTabViewController: NSTabViewController, NibLoadable {
                 item.image = nil
             }
         }
+        insertAppearanceTab()
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    private func insertAppearanceTab() {
+        let vc = AppearanceSettingViewController()
+        let item = NSTabViewItem(viewController: vc)
+        item.label = NSLocalizedString("Appearance", comment: "")
+        item.image = NSImage(systemSymbolName: "paintbrush", accessibilityDescription: nil)
+            ?? NSImage(named: NSImage.colorPanelName)
+        insertTabViewItem(item, at: 1)
     }
 }

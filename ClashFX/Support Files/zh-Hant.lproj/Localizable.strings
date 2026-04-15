@@ -360,3 +360,23 @@
 
 /* No comment provided by engineer. */
 "Later" = "稍後";
+/* No comment provided by engineer. */
+"Select Tray Icon Image" = "選擇托盤圖標圖片";
+
+/* No comment provided by engineer. */
+"Failed to change tray icon" = "更換托盤圖標失敗";
+
+/* No comment provided by engineer. */
+"Drop PNG here" = "拖入 PNG 圖片";
+
+/* No comment provided by engineer. */
+"Select Image" = "選擇圖片";
+
+/* No comment provided by engineer. */
+"Reset" = "重置";
+
+/* No comment provided by engineer. */
+"Appearance" = "外觀";
+
+/* No comment provided by engineer. */
+"Tray Icon" = "托盤圖標";
