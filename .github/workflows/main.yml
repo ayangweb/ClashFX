@@ -117,7 +117,7 @@ jobs:
         mkdir -p /tmp/dmg_temp
         cp -R ClashFX.app /tmp/dmg_temp/
         ln -s /Applications /tmp/dmg_temp/Applications
-        hdiutil create -volname "ClashFX" -srcfolder /tmp/dmg_temp -ov -format UDZO ClashFX.dmg
+        hdiutil create -volname "ClashFX" -srcfolder /tmp/dmg_temp -ov -format UDZO -imagekey zlib-level=6 -fs HFS+ -size 300m ClashFX.dmg
         rm -rf /tmp/dmg_temp
         echo "DMG created: $(ls -lh ClashFX.dmg)"
 
