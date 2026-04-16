@@ -112,11 +112,13 @@ jobs:
     - name: create dmg
       if: startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[beta]')
       run: |
-        mkdir -p dmg_temp
-        cp -R ClashFX.app dmg_temp/
-        ln -s /Applications dmg_temp/Applications
-        hdiutil create -volname "ClashFX" -srcfolder dmg_temp -ov -format UDZO ClashFX.dmg
-        rm -rf dmg_temp
+        echo "Disk before DMG: $(df -h / | tail -1 | awk '{print $4}') available"
+        echo "App size: $(du -sh ClashFX.app | cut -f1)"
+        mkdir -p /tmp/dmg_temp
+        cp -R ClashFX.app /tmp/dmg_temp/
+        ln -s /Applications /tmp/dmg_temp/Applications
+        hdiutil create -volname "ClashFX" -srcfolder /tmp/dmg_temp -ov -format UDZO ClashFX.dmg
+        rm -rf /tmp/dmg_temp
         echo "DMG created: $(ls -lh ClashFX.dmg)"
 
     - name: sign dmg with sparkle
