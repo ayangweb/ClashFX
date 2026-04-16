@@ -95,6 +95,9 @@ jobs:
       run: |
         rm -rf build_derived_data
         rm -rf ~/Library/Developer/Xcode/DerivedData
+        rm -rf ~/Library/Caches/CocoaPods
+        rm -rf ~/Library/Caches/org.swift.swiftpm
+        rm -rf /tmp/*.log /tmp/*.zip 2>/dev/null || true
         echo "Freed disk space: $(df -h / | tail -1 | awk '{print $4}') available"
 
     - name: create dmg
