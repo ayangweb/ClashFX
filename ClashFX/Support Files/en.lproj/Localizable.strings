@@ -393,3 +393,24 @@
 
 /* No comment provided by engineer. */
 "Reset to Default" = "Reset to Default";
+
+/* No comment provided by engineer. */
+"App Logo" = "App Logo";
+
+/* No comment provided by engineer. */
+"Select App Logo Image" = "Select App Logo Image";
+
+/* No comment provided by engineer. */
+"Failed to change app logo" = "Failed to change app logo";
+
+/* No comment provided by engineer. */
+"Failed to reset app logo" = "Failed to reset app logo";
+
+/* No comment provided by engineer. */
+"Drop image here" = "Drop image here";
+
+/* No comment provided by engineer. */
+"Logo image is too large (%d×%d). Maximum allowed size is %d×%d pixels. Recommended size is 512×512 pixels (1024×1024 for Retina @2x)." = "Logo image is too large (%d×%d). Maximum allowed size is %d×%d pixels. Recommended size is 512×512 pixels (1024×1024 for Retina @2x).";
+
+/* No comment provided by engineer. */
+"Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format." = "Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format.";

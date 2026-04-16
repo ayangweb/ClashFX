@@ -430,3 +430,24 @@
 
 /* No comment provided by engineer. */
 "Reset to Default" = "恢复默认";
+
+/* No comment provided by engineer. */
+"App Logo" = "应用图标";
+
+/* No comment provided by engineer. */
+"Select App Logo Image" = "选择应用图标图片";
+
+/* No comment provided by engineer. */
+"Failed to change app logo" = "更换应用图标失败";
+
+/* No comment provided by engineer. */
+"Failed to reset app logo" = "重置应用图标失败";
+
+/* No comment provided by engineer. */
+"Drop image here" = "拖入图片";
+
+/* No comment provided by engineer. */
+"Logo image is too large (%d×%d). Maximum allowed size is %d×%d pixels. Recommended size is 512×512 pixels (1024×1024 for Retina @2x)." = "图标尺寸过大（%d×%d）。最大允许尺寸为 %d×%d 像素。推荐尺寸为 512×512 像素（Retina @2x 为 1024×1024）。";
+
+/* No comment provided by engineer. */
+"Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format." = "拖拽图片到此处自定义应用图标。\n建议尺寸：512×512 像素（@2x 为 1024×1024），PNG 或 ICNS 格式。";

@@ -393,3 +393,24 @@
 
 /* No comment provided by engineer. */
 "Reset to Default" = "恢復預設";
+
+/* No comment provided by engineer. */
+"App Logo" = "應用圖示";
+
+/* No comment provided by engineer. */
+"Select App Logo Image" = "選擇應用圖示圖片";
+
+/* No comment provided by engineer. */
+"Failed to change app logo" = "更換應用圖示失敗";
+
+/* No comment provided by engineer. */
+"Failed to reset app logo" = "重置應用圖示失敗";
+
+/* No comment provided by engineer. */
+"Drop image here" = "拖入圖片";
+
+/* No comment provided by engineer. */
+"Logo image is too large (%d×%d). Maximum allowed size is %d×%d pixels. Recommended size is 512×512 pixels (1024×1024 for Retina @2x)." = "圖示尺寸過大（%d×%d）。最大允許尺寸為 %d×%d 像素。推薦尺寸為 512×512 像素（Retina @2x 為 1024×1024）。";
+
+/* No comment provided by engineer. */
+"Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format." = "拖曳圖片到此處自訂應用圖示。\n建議尺寸：512×512 像素（@2x 為 1024×1024），PNG 或 ICNS 格式。";
