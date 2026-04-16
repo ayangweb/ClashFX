@@ -210,7 +210,14 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git remote set-url origin "https://x-access-token:${WEBSITE_PAT}@github.com/Clash-FX/ClashFX.git"
-        git checkout -b "$branch"
+
+        # Save modified appcast, then branch from latest main to avoid merge conflicts
+        cp docs/appcast.xml /tmp/appcast.xml
+        git fetch origin main
+        git stash --include-untracked
+        git checkout -b "$branch" origin/main
+        cp /tmp/appcast.xml docs/appcast.xml
+
         git add docs/appcast.xml
         git commit -m "release: update appcast.xml for v${tag} [skip ci]"
         git push origin "$branch"
