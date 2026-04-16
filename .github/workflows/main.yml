@@ -58,6 +58,15 @@ jobs:
         bundle exec fastlane run increment_version_number_in_plist version_number:"${tag}" scheme:"ClashFX"
         bundle exec fastlane run set_info_plist_value path:ClashFX/Info.plist key:BETA value:true
 
+    - name: free disk space before build
+      run: |
+        echo "Before cleanup: $(df -h / | tail -1 | awk '{print $4}') available"
+        sudo rm -rf /Users/runner/Library/Android 2>/dev/null || true
+        sudo rm -rf /Library/Frameworks/Mono.framework 2>/dev/null || true
+        sudo rm -rf /usr/local/share/dotnet 2>/dev/null || true
+        rm -rf ~/Library/Caches/CocoaPods 2>/dev/null || true
+        echo "After cleanup: $(df -h / | tail -1 | awk '{print $4}') available"
+
     - name: build
       run: |
         cd ClashFX
