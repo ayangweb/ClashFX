@@ -137,6 +137,14 @@ class RemoteConfigManager {
         }
     }
 
+    /// User-Agent used for remote subscription downloads.
+    ///
+    /// Some subscription providers return a dummy or legacy-only config when the
+    /// request advertises itself as ClashX/ClashFX, because they assume an old
+    /// Dreamacro/clash-based client without SS-2022 support. ClashFX ships a
+    /// mihomo-based core, so using a mihomo UA avoids that false downgrade.
+    private static let subscriptionUserAgent = "mihomo/1.19.11"
+
     static func getRemoteConfigData(config: RemoteConfigModel, complete: @escaping ((String?, String?) -> Void)) {
         guard var urlRequest = try? URLRequest(url: config.url, method: .get) else {
             assertionFailure()
@@ -144,6 +152,7 @@ class RemoteConfigManager {
             return
         }
         urlRequest.cachePolicy = .reloadIgnoringCacheData
+        urlRequest.setValue(subscriptionUserAgent, forHTTPHeaderField: "User-Agent")
 
         AF.request(urlRequest)
             .validate()
