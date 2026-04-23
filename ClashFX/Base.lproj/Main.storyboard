@@ -1040,6 +1040,12 @@
                                 </items>
                             </menu>
                         </menuItem>
+                        <menuItem title="Restart" id="rST-ap-p0x">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="actionRestart:" target="Voe-Tx-rLC" id="rST-ap-aCt"/>
+                            </connections>
+                        </menuItem>
                         <menuItem title="Quit" keyEquivalent="q" id="NXU-86-Eem">
                             <connections>
                                 <action selector="actionQuit:" target="Voe-Tx-rLC" id="ZtA-Bb-6xk"/>

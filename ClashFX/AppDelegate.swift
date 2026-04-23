@@ -1084,6 +1084,10 @@ extension AppDelegate {
         NSApplication.shared.terminate(self)
     }
 
+    @IBAction func actionRestart(_ sender: Any) {
+        restartApp()
+    }
+
     @IBAction func actionMoreSetting(_ sender: Any) {
         ClashWindowController<SettingTabViewController>.create().showWindow(sender)
     }
