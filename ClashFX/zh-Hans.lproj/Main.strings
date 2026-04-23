@@ -88,6 +88,9 @@
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "NXU-86-Eem"; */
 "NXU-86-Eem.title" = "退出";
 
+/* Class = "NSMenuItem"; title = "Restart"; ObjectID = "rST-ap-p0x"; */
+"rST-ap-p0x.title" = "重启";
+
 /* Class = "NSMenu"; title = "Help"; ObjectID = "ogW-pn-jeR"; */
 "ogW-pn-jeR.title" = "帮助";
 
