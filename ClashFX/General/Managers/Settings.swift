@@ -93,4 +93,96 @@ enum Settings {
 
     @UserDefault("appLanguage", defaultValue: "")
     static var appLanguage: String
+
+    // MARK: - Tray Menu Visibility
+
+    @UserDefault("trayMenuShowProxyMode", defaultValue: true)
+    static var trayMenuShowProxyMode: Bool
+
+    @UserDefault("trayMenuShowNodeSwitch", defaultValue: true)
+    static var trayMenuShowNodeSwitch: Bool
+
+    // Proxy Actions group
+    @UserDefault("trayMenuShowProxyActions", defaultValue: true)
+    static var trayMenuShowProxyActions: Bool
+
+    @UserDefault("trayMenuShowSystemProxy", defaultValue: true)
+    static var trayMenuShowSystemProxy: Bool
+
+    @UserDefault("trayMenuShowEnhancedMode", defaultValue: true)
+    static var trayMenuShowEnhancedMode: Bool
+
+    @UserDefault("trayMenuShowCopyShellCmd", defaultValue: true)
+    static var trayMenuShowCopyShellCmd: Bool
+
+    // General Settings group
+    @UserDefault("trayMenuShowGeneralSettings", defaultValue: true)
+    static var trayMenuShowGeneralSettings: Bool
+
+    @UserDefault("trayMenuShowStartAtLogin", defaultValue: true)
+    static var trayMenuShowStartAtLogin: Bool
+
+    @UserDefault("trayMenuShowNetSpeed", defaultValue: true)
+    static var trayMenuShowNetSpeed: Bool
+
+    @UserDefault("trayMenuShowAllowLan", defaultValue: true)
+    static var trayMenuShowAllowLan: Bool
+
+    // Tools group
+    @UserDefault("trayMenuShowTools", defaultValue: true)
+    static var trayMenuShowTools: Bool
+
+    @UserDefault("trayMenuShowBenchmark", defaultValue: true)
+    static var trayMenuShowBenchmark: Bool
+
+    @UserDefault("trayMenuShowDashboard", defaultValue: true)
+    static var trayMenuShowDashboard: Bool
+
+    @UserDefault("trayMenuShowConnections", defaultValue: true)
+    static var trayMenuShowConnections: Bool
+
+    // Configs group
+    @UserDefault("trayMenuShowConfigs", defaultValue: true)
+    static var trayMenuShowConfigs: Bool
+
+    @UserDefault("trayMenuShowConfigEditor", defaultValue: true)
+    static var trayMenuShowConfigEditor: Bool
+
+    @UserDefault("trayMenuShowOpenConfigFolder", defaultValue: true)
+    static var trayMenuShowOpenConfigFolder: Bool
+
+    @UserDefault("trayMenuShowReloadConfig", defaultValue: true)
+    static var trayMenuShowReloadConfig: Bool
+
+    @UserDefault("trayMenuShowUpdateExternal", defaultValue: true)
+    static var trayMenuShowUpdateExternal: Bool
+
+    @UserDefault("trayMenuShowRemoteConfig", defaultValue: true)
+    static var trayMenuShowRemoteConfig: Bool
+
+    @UserDefault("trayMenuShowRemoteController", defaultValue: true)
+    static var trayMenuShowRemoteController: Bool
+
+    // Language (single toggle)
+    @UserDefault("trayMenuShowLanguage", defaultValue: true)
+    static var trayMenuShowLanguage: Bool
+
+    // Help group
+    @UserDefault("trayMenuShowHelp", defaultValue: true)
+    static var trayMenuShowHelp: Bool
+
+    @UserDefault("trayMenuShowAbout", defaultValue: true)
+    static var trayMenuShowAbout: Bool
+
+    @UserDefault("trayMenuShowCheckUpdate", defaultValue: true)
+    static var trayMenuShowCheckUpdate: Bool
+
+    @UserDefault("trayMenuShowLogLevel", defaultValue: true)
+    static var trayMenuShowLogLevel: Bool
+
+    @UserDefault("trayMenuShowShowLog", defaultValue: true)
+    static var trayMenuShowShowLog: Bool
+
+    @UserDefault("trayMenuShowPorts", defaultValue: true)
+    static var trayMenuShowPorts: Bool
 }

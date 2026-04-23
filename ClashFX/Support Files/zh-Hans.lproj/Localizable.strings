@@ -451,3 +451,69 @@
 
 /* No comment provided by engineer. */
 "Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format." = "拖拽图片到此处自定义应用图标。\n建议尺寸：512×512 像素（@2x 为 1024×1024），PNG 或 ICNS 格式。";
+
+/* Tray Menu Settings */
+"Tray Menu" = "托盘菜单";
+
+/* No comment provided by engineer. */
+"Node Switch" = "节点切换";
+
+/* No comment provided by engineer. */
+"Proxy Actions" = "代理控制";
+
+/* No comment provided by engineer. */
+"General Settings" = "通用设置";
+
+/* No comment provided by engineer. */
+"Tools" = "工具";
+
+/* No comment provided by engineer. */
+"Start at Login" = "开机启动";
+
+/* No comment provided by engineer. */
+"Dashboard" = "控制台";
+
+/* No comment provided by engineer. */
+"Connection Details" = "连接查看器";
+
+/* No comment provided by engineer. */
+"Configs" = "配置";
+
+/* No comment provided by engineer. */
+"Open Config Folder" = "打开配置文件夹";
+
+/* No comment provided by engineer. */
+"Reload Config" = "重载配置文件";
+
+/* No comment provided by engineer. */
+"Update External Resources" = "更新外部资源";
+
+/* No comment provided by engineer. */
+"Remote Config" = "托管配置";
+
+/* No comment provided by engineer. */
+"Remote Controller" = "远程控制器";
+
+/* No comment provided by engineer. */
+"Help" = "帮助";
+
+/* No comment provided by engineer. */
+"About" = "关于";
+
+/* No comment provided by engineer. */
+"Check for Update" = "检查更新";
+
+/* No comment provided by engineer. */
+"Log Level" = "日志等级";
+
+/* No comment provided by engineer. */
+"Show Log" = "显示日志";
+
+/* No comment provided by engineer. */
+"Ports" = "端口";
+
+/* No comment provided by engineer. */
+"Show Net Speed" = "显示实时速率";
+
+/* No comment provided by engineer. */
+"Allow from LAN" = "允许局域网连接";

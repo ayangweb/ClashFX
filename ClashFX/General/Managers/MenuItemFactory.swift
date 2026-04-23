@@ -96,12 +96,14 @@ class MenuItemFactory {
         let app = AppDelegate.shared
         let startIndex = app.statusMenu.items.firstIndex(of: app.separatorLineTop)! + 1
         let endIndex = app.statusMenu.items.firstIndex(of: app.sepatatorLineEndProxySelect)!
-        app.sepatatorLineEndProxySelect.isHidden = menus.isEmpty
+        let nodeHidden = !Settings.trayMenuShowNodeSwitch
+        app.sepatatorLineEndProxySelect.isHidden = menus.isEmpty || nodeHidden
         for _ in 0 ..< endIndex - startIndex {
             app.statusMenu.removeItem(at: startIndex)
         }
         for each in menus {
             app.statusMenu.insertItem(each, at: startIndex)
+            each.isHidden = nodeHidden
         }
     }
 

@@ -414,3 +414,69 @@
 
 /* No comment provided by engineer. */
 "Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format." = "Drag and drop an image to customize the app icon.\nRecommended: 512x512 px (1024x1024 for @2x), PNG or ICNS format.";
+
+/* Tray Menu Settings */
+"Tray Menu" = "Tray Menu";
+
+/* No comment provided by engineer. */
+"Node Switch" = "Node Switch";
+
+/* No comment provided by engineer. */
+"Proxy Actions" = "Proxy Actions";
+
+/* No comment provided by engineer. */
+"General Settings" = "General Settings";
+
+/* No comment provided by engineer. */
+"Tools" = "Tools";
+
+/* No comment provided by engineer. */
+"Start at Login" = "Start at Login";
+
+/* No comment provided by engineer. */
+"Dashboard" = "Dashboard";
+
+/* No comment provided by engineer. */
+"Connection Details" = "Connection Details";
+
+/* No comment provided by engineer. */
+"Configs" = "Configs";
+
+/* No comment provided by engineer. */
+"Open Config Folder" = "Open Config Folder";
+
+/* No comment provided by engineer. */
+"Reload Config" = "Reload Config";
+
+/* No comment provided by engineer. */
+"Update External Resources" = "Update External Resources";
+
+/* No comment provided by engineer. */
+"Remote Config" = "Remote Config";
+
+/* No comment provided by engineer. */
+"Remote Controller" = "Remote Controller";
+
+/* No comment provided by engineer. */
+"Help" = "Help";
+
+/* No comment provided by engineer. */
+"About" = "About";
+
+/* No comment provided by engineer. */
+"Check for Update" = "Check for Update";
+
+/* No comment provided by engineer. */
+"Log Level" = "Log Level";
+
+/* No comment provided by engineer. */
+"Show Log" = "Show Log";
+
+/* No comment provided by engineer. */
+"Ports" = "Ports";
+
+/* No comment provided by engineer. */
+"Show Net Speed" = "Show Net Speed";
+
+/* No comment provided by engineer. */
+"Allow from LAN" = "Allow from LAN";

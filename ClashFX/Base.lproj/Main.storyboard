@@ -786,6 +786,20 @@
                         <outlet property="showNetSpeedIndicatorMenuItem" destination="YIO-Vj-64f" id="9a5-3N-Ylk"/>
                         <outlet property="socksPortMenuItem" destination="Uy1-g8-r6Q" id="NiI-Gy-9Sa"/>
                         <outlet property="statusMenu" destination="Afa-lD-EbR" id="cov-E9-WrO"/>
+                        <outlet property="benchmarkMenuItem" destination="COu-UX-bww" id="tmx-BM-bw1"/>
+                        <outlet property="configsMenuItem" destination="JMV-Dy-CI0" id="cfg-MI-mn1"/>
+                        <outlet property="helpMenuItem" destination="Dd9-2F-FVY" id="hlp-MI-mn1"/>
+                        <outlet property="aboutMenuItem" destination="hUb-k9-TEf" id="abt-MI-mn1"/>
+                        <outlet property="showLogMenuItem" destination="xxZ-9l-69m" id="slg-MI-mn1"/>
+                        <outlet property="portsMenuItem" destination="9i0-LH-x04" id="pts-MI-mn1"/>
+                        <outlet property="openConfigFolderMenuItem" destination="DwE-WX-ETZ" id="ocf-MI-mn1"/>
+                        <outlet property="reloadConfigMenuItem" destination="q3G-VH-eyy" id="rlc-MI-mn1"/>
+                        <outlet property="updateExternalResourceMenuItem" destination="9g1-lW-mA8" id="uer-MI-mn1"/>
+                        <outlet property="remoteConfigMenuItem" destination="h1C-R6-Y9w" id="rmc-MI-mn1"/>
+                        <outlet property="remoteControllerMenuItem" destination="BRR-WK-aeP" id="rct-MI-mn1"/>
+                        <outlet property="proxyActionsSeparator" destination="nXl-3B-Q18" id="pas-SP-mn1"/>
+                        <outlet property="generalSettingsSeparator" destination="HZ7-Hd-kA2" id="gss-SP-mn1"/>
+                        <outlet property="toolsSeparator" destination="UpD-DI-Smv" id="tls-SP-mn1"/>
                     </connections>
                 </customObject>
                 <menu id="Afa-lD-EbR">

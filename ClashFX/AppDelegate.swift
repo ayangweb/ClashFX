@@ -50,6 +50,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var externalControlSeparator: NSMenuItem!
     @IBOutlet var connectionsMenuItem: NSMenuItem!
 
+    // Items without existing outlets, wired via storyboard
+    @IBOutlet var benchmarkMenuItem: NSMenuItem!
+    @IBOutlet var configsMenuItem: NSMenuItem!
+    @IBOutlet var helpMenuItem: NSMenuItem!
+    @IBOutlet var aboutMenuItem: NSMenuItem!
+    @IBOutlet var showLogMenuItem: NSMenuItem!
+    @IBOutlet var portsMenuItem: NSMenuItem!
+    @IBOutlet var openConfigFolderMenuItem: NSMenuItem!
+    @IBOutlet var reloadConfigMenuItem: NSMenuItem!
+    @IBOutlet var updateExternalResourceMenuItem: NSMenuItem!
+    @IBOutlet var remoteConfigMenuItem: NSMenuItem!
+    @IBOutlet var remoteControllerMenuItem: NSMenuItem!
+
+    // Section separators
+    @IBOutlet var proxyActionsSeparator: NSMenuItem!
+    @IBOutlet var generalSettingsSeparator: NSMenuItem!
+    @IBOutlet var toolsSeparator: NSMenuItem!
+
+    // Programmatically-added items stored for visibility management
+    var langMenuItem: NSMenuItem?
+    var configEditorMenuItem: NSMenuItem?
+
     var disposeBag = DisposeBag()
     var statusItemView: StatusItemViewProtocol!
     var isSpeedTesting = false
@@ -176,6 +198,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         registCrashLogger()
         KeyboardShortCutManager.setup()
         RemoteControlManager.setupMenuItem(separator: externalControlSeparator)
+        applyTrayMenuVisibility()
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(onTrayMenuSettingsChanged),
+            name: .trayMenuSettingsChanged,
+            object: nil
+        )
     }
 
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
@@ -1122,6 +1152,7 @@ extension AppDelegate {
 
         if let settingsIndex = statusMenu.items.firstIndex(where: { $0.action == #selector(actionMoreSetting(_:)) }) {
             statusMenu.insertItem(langItem, at: settingsIndex + 1)
+            langMenuItem = langItem
         }
     }
 
@@ -1199,6 +1230,7 @@ extension AppDelegate {
         editorItem.target = self
         if let separatorIndex = configMenu.items.firstIndex(of: configSeparatorLine) {
             configMenu.insertItem(editorItem, at: separatorIndex + 1)
+            configEditorMenuItem = editorItem
         }
     }
 
@@ -1408,5 +1440,81 @@ extension AppDelegate {
         } else if host == "update-config" {
             updateConfig()
         }
+    }
+}
+
+// MARK: Tray Menu Visibility
+
+extension AppDelegate {
+    @objc func onTrayMenuSettingsChanged() {
+        applyTrayMenuVisibility()
+    }
+
+    func applyTrayMenuVisibility() {
+        // Proxy Mode (single item)
+        proxyModeMenuItem.isHidden = !Settings.trayMenuShowProxyMode
+
+        // Node Switch: hide/show proxy group items that sit between the two separators
+        let nodeHidden = !Settings.trayMenuShowNodeSwitch
+        if let topIdx = statusMenu.items.firstIndex(of: separatorLineTop),
+           let endIdx = statusMenu.items.firstIndex(of: sepatatorLineEndProxySelect) {
+            let hasItems = endIdx > topIdx + 1
+            for i in (topIdx + 1) ..< endIdx {
+                statusMenu.items[i].isHidden = nodeHidden
+            }
+            sepatatorLineEndProxySelect.isHidden = !hasItems || nodeHidden
+        }
+
+        // Proxy Actions group
+        let showProxyActions = Settings.trayMenuShowProxyActions
+        proxySettingMenuItem.isHidden = !(showProxyActions && Settings.trayMenuShowSystemProxy)
+        enhancedModeMenuItem.isHidden = !(showProxyActions && Settings.trayMenuShowEnhancedMode)
+        let showCopy = showProxyActions && Settings.trayMenuShowCopyShellCmd
+        copyExportCommandMenuItem.isHidden = !showCopy
+        copyExportCommandExternalMenuItem.isHidden = !showCopy
+        let anyProxyAction = showProxyActions && (Settings.trayMenuShowSystemProxy || Settings.trayMenuShowEnhancedMode || Settings.trayMenuShowCopyShellCmd)
+        proxyActionsSeparator.isHidden = !anyProxyAction
+
+        // General Settings group
+        let showGeneral = Settings.trayMenuShowGeneralSettings
+        autoStartMenuItem.isHidden = !(showGeneral && Settings.trayMenuShowStartAtLogin)
+        showNetSpeedIndicatorMenuItem.isHidden = !(showGeneral && Settings.trayMenuShowNetSpeed)
+        allowFromLanMenuItem.isHidden = !(showGeneral && Settings.trayMenuShowAllowLan)
+        let anyGeneral = showGeneral && (Settings.trayMenuShowStartAtLogin || Settings.trayMenuShowNetSpeed || Settings.trayMenuShowAllowLan)
+        generalSettingsSeparator.isHidden = !anyGeneral
+
+        // Tools group
+        let showTools = Settings.trayMenuShowTools
+        benchmarkMenuItem.isHidden = !(showTools && Settings.trayMenuShowBenchmark)
+        if #available(macOS 10.15, *) {
+            dashboardMenuItem.isHidden = !(showTools && Settings.trayMenuShowDashboard)
+            connectionsMenuItem.isHidden = !(showTools && Settings.trayMenuShowConnections)
+            let anyTools = showTools && (Settings.trayMenuShowBenchmark || Settings.trayMenuShowDashboard || Settings.trayMenuShowConnections)
+            toolsSeparator.isHidden = !anyTools
+        } else {
+            toolsSeparator.isHidden = !(showTools && Settings.trayMenuShowBenchmark)
+        }
+
+        // Configs group
+        let showConfigs = Settings.trayMenuShowConfigs
+        configsMenuItem.isHidden = !showConfigs
+        configEditorMenuItem?.isHidden = !(showConfigs && Settings.trayMenuShowConfigEditor)
+        openConfigFolderMenuItem.isHidden = !(showConfigs && Settings.trayMenuShowOpenConfigFolder)
+        reloadConfigMenuItem.isHidden = !(showConfigs && Settings.trayMenuShowReloadConfig)
+        updateExternalResourceMenuItem.isHidden = !(showConfigs && Settings.trayMenuShowUpdateExternal)
+        remoteConfigMenuItem.isHidden = !(showConfigs && Settings.trayMenuShowRemoteConfig)
+        remoteControllerMenuItem.isHidden = !(showConfigs && Settings.trayMenuShowRemoteController)
+
+        // Language (single item, added dynamically)
+        langMenuItem?.isHidden = !Settings.trayMenuShowLanguage
+
+        // Help group
+        let showHelp = Settings.trayMenuShowHelp
+        helpMenuItem.isHidden = !showHelp
+        aboutMenuItem.isHidden = !(showHelp && Settings.trayMenuShowAbout)
+        checkForUpdateMenuItem.isHidden = !(showHelp && Settings.trayMenuShowCheckUpdate)
+        logLevelMenuItem.isHidden = !(showHelp && Settings.trayMenuShowLogLevel)
+        showLogMenuItem.isHidden = !(showHelp && Settings.trayMenuShowShowLog)
+        portsMenuItem.isHidden = !(showHelp && Settings.trayMenuShowPorts)
     }
 }

@@ -70,6 +70,7 @@
 		4994B5542A47C4FF00E595B9 /* NormalMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */; };
 		78E0F1560AFD95A584F979B9 /* TrayIconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBA643EF41EB65C39E5574 /* TrayIconPickerView.swift */; };
 		A1B2C3D4E5F60001AA000001 /* LogoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60002AA000001 /* LogoPickerView.swift */; };
+		A1B2C3D4E5F60007AA000001 /* TrayMenuSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60008AA000001 /* TrayMenuSettingView.swift */; };
 		A1B2C3D4E5F60003AA000001 /* AppLogoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60004AA000001 /* AppLogoTool.swift */; };
 		A1B2C3D4E5F60005AA000001 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60006AA000001 /* ImagePickerView.swift */; };
 		499976C821359F0400E7BF83 /* ClashWebViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499976C721359F0400E7BF83 /* ClashWebViewContoller.swift */; };
@@ -251,6 +252,7 @@
 		4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalMenuItemView.swift; sourceTree = "<group>"; };
 		6DFBA643EF41EB65C39E5574 /* TrayIconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayIconPickerView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F60002AA000001 /* LogoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPickerView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60008AA000001 /* TrayMenuSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayMenuSettingView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F60006AA000001 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F60004AA000001 /* AppLogoTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoTool.swift; sourceTree = "<group>"; };
 		499976C721359F0400E7BF83 /* ClashWebViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClashWebViewContoller.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				49228456270AADE20027A4B6 /* RemoteConfigUpdateIntervalSettingView.swift */,
 				4994B5532A47C4FF00E595B9 /* NormalMenuItemView.swift */,
 				A1B2C3D4E5F60002AA000001 /* LogoPickerView.swift */,
+				A1B2C3D4E5F60008AA000001 /* TrayMenuSettingView.swift */,
 				A1B2C3D4E5F60006AA000001 /* ImagePickerView.swift */,
 				6DFBA643EF41EB65C39E5574 /* TrayIconPickerView.swift */,
 			);
@@ -1079,6 +1082,7 @@
 				F976275C23634DF8000EDEFE /* LoginServiceKit.swift in Sources */,
 				4994B5542A47C4FF00E595B9 /* NormalMenuItemView.swift in Sources */,
 				A1B2C3D4E5F60001AA000001 /* LogoPickerView.swift in Sources */,
+				A1B2C3D4E5F60007AA000001 /* TrayMenuSettingView.swift in Sources */,
 				A1B2C3D4E5F60003AA000001 /* AppLogoTool.swift in Sources */,
 				A1B2C3D4E5F60005AA000001 /* ImagePickerView.swift in Sources */,
 				78E0F1560AFD95A584F979B9 /* TrayIconPickerView.swift in Sources */,

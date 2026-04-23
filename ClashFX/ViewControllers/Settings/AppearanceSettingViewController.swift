@@ -9,6 +9,7 @@ import Cocoa
 
 class AppearanceSettingViewController: NSViewController {
     private var didComputePreferredSize = false
+    private let trayMenuSettingViewHeight: CGFloat = 300
 
     override func loadView() {
         let width: CGFloat = 400
@@ -47,8 +48,26 @@ class AppearanceSettingViewController: NSViewController {
             ])
         }
 
+        let menuBox = NSBox()
+        menuBox.translatesAutoresizingMaskIntoConstraints = false
+        menuBox.title = NSLocalizedString("Tray Menu", comment: "")
+
+        let menuSettingView = TrayMenuSettingView()
+        menuBox.contentView?.addSubview(menuSettingView)
+
+        if let cv = menuBox.contentView {
+            NSLayoutConstraint.activate([
+                menuSettingView.topAnchor.constraint(equalTo: cv.topAnchor, constant: 8),
+                menuSettingView.leadingAnchor.constraint(equalTo: cv.leadingAnchor, constant: 8),
+                menuSettingView.trailingAnchor.constraint(equalTo: cv.trailingAnchor, constant: -8),
+                menuSettingView.heightAnchor.constraint(equalToConstant: trayMenuSettingViewHeight),
+                cv.bottomAnchor.constraint(equalTo: menuSettingView.bottomAnchor, constant: 8),
+            ])
+        }
+
         contentView.addSubview(trayBox)
         contentView.addSubview(logoBox)
+        contentView.addSubview(menuBox)
 
         NSLayoutConstraint.activate([
             trayBox.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
@@ -59,7 +78,11 @@ class AppearanceSettingViewController: NSViewController {
             logoBox.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             logoBox.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
 
-            contentView.bottomAnchor.constraint(greaterThanOrEqualTo: logoBox.bottomAnchor, constant: 20)
+            menuBox.topAnchor.constraint(equalTo: logoBox.bottomAnchor, constant: 12),
+            menuBox.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            menuBox.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+
+            contentView.bottomAnchor.constraint(greaterThanOrEqualTo: menuBox.bottomAnchor, constant: 20)
         ])
 
         view = contentView
@@ -85,3 +108,4 @@ class AppearanceSettingViewController: NSViewController {
         }
     }
 }
+
