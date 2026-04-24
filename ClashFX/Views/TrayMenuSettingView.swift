@@ -153,7 +153,7 @@ class TrayMenuSettingView: NSView {
         let stack = NSStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.orientation = .vertical
-        stack.alignment = .leading
+        stack.alignment = .fill
         stack.spacing = 0
         stack.edgeInsets = NSEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
 
@@ -236,7 +236,7 @@ class TrayMenuSettingView: NSView {
         container.orientation = .horizontal
         container.spacing = 8
         container.alignment = .centerY
-        container.edgeInsets = NSEdgeInsets(top: 3, left: 4 + indent, bottom: 3, right: 4)
+        container.edgeInsets = NSEdgeInsets(top: 6, left: 4 + indent, bottom: 6, right: 4)
 
         let label = NSTextField(labelWithString: title)
         label.translatesAutoresizingMaskIntoConstraints = false
